@@ -1,0 +1,156 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #d0e7f9, #f0f8ff);
+  padding: 30px 20px;
+  margin: 0;
+  transition: background 0.5s, color 0.5s;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 20px 30px; /* extra top padding to make space for theme button */
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #020303;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  flex: 1 1 65%;
+  padding: 10px;
+  border: 1px solid #aacde6;
+  border-radius: 15px;
+  outline: none;
+  font-size: 16px;
+  background-color: #e6f2fa;
+  color: #2c3e50;
+  min-width: 0;
+}
+
+button {
+  flex: 1 1 25%;
+  padding: 10px;
+  background-color: #89c2d9;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  min-width: 0;
+}
+
+button:hover {
+  background-color: #61a5c2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f0f8ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.6;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.task-buttons button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffb3ba;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+}
+
+.task-buttons button.done-btn {
+  background-color: #baffc9;
+  color: #333;
+}
+
+.task-buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(to right, #2e3c4f, #3a5a74);
+  color: #f0f0f0;
+}
+
+body.dark input,
+body.dark li {
+  background-color: #354b60;
+  color: white;
+  border-color: #566b80;
+}
+
+body.dark button {
+  background-color: #566b80;
+}
+
+body.dark button:hover {
+  background-color: #6e88a4;
+}
+#themeToggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+
+#themeToggle:hover {
+  background-color: #666;
+}
+
