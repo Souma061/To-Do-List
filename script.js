@@ -80,6 +80,7 @@ function toggleTheme() {
   } else {
     toggleBtn.textContent = "🌙 Dark Mode";
   }
+   loadTasks();
 }
 
 
