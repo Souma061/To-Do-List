@@ -77,19 +77,24 @@ function toggleTheme() {
 
   if (body.classList.contains("dark")) {
     toggleBtn.textContent = "☀️ Light Mode";
+    localStorage.setItem("theme", "dark"); // ✅ save dark theme
   } else {
     toggleBtn.textContent = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light"); // ✅ save light theme
   }
-   loadTasks();
 }
+
 
 
 window.onload = () => {
   const savedTheme = localStorage.getItem("theme") || "light";
-  document.body.classList.add(savedTheme);
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
 
   const toggleBtn = document.getElementById("themeToggle");
-  toggleBtn.textContent = savedTheme === "dark" ? "🌞 Light Mode" : "🌙 Dark Mode";
+  toggleBtn.textContent = savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
 
   loadTasks();
 }
